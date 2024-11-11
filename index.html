@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Scientific Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="display" class="calculator-display" disabled />
+    <div class="calculator-buttons">
+      <!-- Scientific Functions -->
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="deleteLast()">DEL</button>
+      <button onclick="appendSymbol('(')">(</button>
+      <button onclick="appendSymbol(')')">)</button>
+      
+      <button onclick="appendSymbol('Math.sin(')">sin</button>
+      <button onclick="appendSymbol('Math.cos(')">cos</button>
+      <button onclick="appendSymbol('Math.tan(')">tan</button>
+      <button onclick="appendSymbol('Math.sqrt(')">√</button>
+
+      <button onclick="appendSymbol('Math.log10(')">log</button>
+      <button onclick="appendSymbol('Math.exp(')">exp</button>
+      <button onclick="appendSymbol('**')">^</button>
+      <button onclick="appendSymbol('/')">÷</button>
+
+      <!-- Standard Calculator Buttons -->
+      <button onclick="appendSymbol('7')">7</button>
+      <button onclick="appendSymbol('8')">8</button>
+      <button onclick="appendSymbol('9')">9</button>
+      <button onclick="appendSymbol('*')">×</button>
+
+      <button onclick="appendSymbol('4')">4</button>
+      <button onclick="appendSymbol('5')">5</button>
+      <button onclick="appendSymbol('6')">6</button>
+      <button onclick="appendSymbol('-')">−</button>
+
+      <button onclick="appendSymbol('1')">1</button>
+      <button onclick="appendSymbol('2')">2</button>
+      <button onclick="appendSymbol('3')">3</button>
+      <button onclick="appendSymbol('+')">+</button>
+
+      <button onclick="appendSymbol('0')">0</button>
+      <button onclick="appendSymbol('.')">.</button>
+      <button onclick="calculateResult()" class="equal">=</button>
+
+      <!-- Unit Conversions -->
+      <select id="unit-convert" onchange="convertUnits()">
+        <option value="">Convert Units</option>
+        <!-- Length -->
+        <option value="m-to-ft">Meters to Feet</option>
+        <option value="ft-to-m">Feet to Meters</option>
+        <option value="cm-to-in">Centimeters to Inches</option>
+        <option value="in-to-cm">Inches to Centimeters</option>
+        
+        <!-- Mass -->
+        <option value="kg-to-lbs">Kilograms to Pounds</option>
+        <option value="lbs-to-kg">Pounds to Kilograms</option>
+
+        <!-- Temperature -->
+        <option value="c-to-f">Celsius to Fahrenheit</option>
+        <option value="f-to-c">Fahrenheit to Celsius</option>
+
+        <!-- Volume -->
+        <option value="l-to-gal">Liters to Gallons</option>
+        <option value="gal-to-l">Gallons to Liters</option>
+
+        <!-- Data -->
+        <option value="mb-to-gb">MB to GB</option>
+        <option value="gb-to-mb">GB to MB</option>
+
+        <!-- Time -->
+        <option value="min-to-sec">Minutes to Seconds</option>
+        <option value="hr-to-min">Hours to Minutes</option>
+      </select>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
